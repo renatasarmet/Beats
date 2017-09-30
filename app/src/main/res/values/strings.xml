@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Beats</string>
+    <string name="username">Nome de Usuário</string>
+    <string name="password">Senha</string>
+    <string name="sign_in">Entrar</string>
+</resources>
