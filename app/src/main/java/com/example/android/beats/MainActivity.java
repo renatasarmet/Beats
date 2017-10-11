@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         editTextUsername = (TextInputEditText) findViewById(R.id.editTextUsername);
         editTextPassword = (TextInputEditText) findViewById(R.id.editTextPassword);
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
-
         buttonAdd = (Button) findViewById(R.id.buttonAdd);
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
@@ -34,12 +33,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        buttonAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setContentView(R.layout.addcontact);
-            }
-        });
 
     }
 }
