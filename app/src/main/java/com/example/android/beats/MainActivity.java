@@ -1,36 +1,33 @@
 package com.example.android.beats;
 
+import android.content.Intent;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextInputEditText editTextUsername;
-    TextInputEditText editTextPassword;
-    Button buttonLogin;
-    Button buttonAdd;
-
+    @BindView(R.id.editTextUsername) TextInputEditText editTextUsername;
+    @BindView(R.id.editTextPassword) TextInputEditText editTextPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        editTextUsername = (TextInputEditText) findViewById(R.id.editTextUsername);
-        editTextPassword = (TextInputEditText) findViewById(R.id.editTextPassword);
-        buttonLogin = (Button) findViewById(R.id.buttonLogin);
-        buttonAdd = (Button) findViewById(R.id.buttonAdd);
-
-        buttonLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(!editTextUsername.toString().isEmpty() && !editTextPassword.toString().isEmpty()){
-                    setContentView(R.layout.contacts);
-                }
-            }
-        });
+        ButterKnife.bind(this);
 
     }
+    @OnClick(R.id.buttonLogin)
+    public void login(){
+        if(!editTextUsername.toString().isEmpty() && !editTextPassword.toString().isEmpty()){
+            Intent abrirContatos = new Intent(MainActivity.this,ContatoActivity.class);
+            startActivity(abrirContatos);
+        }
+    }
+
+
 }
