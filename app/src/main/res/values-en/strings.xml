@@ -4,4 +4,9 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="sign_in">Sign in</string>
+    <string name="adress">Adress</string>
+    <string name="phone">Phone</string>
+    <string name="email">E-mail</string>
+    <string name="add_picture">Add picture</string>
+    <string name="save">Save</string>
 </resources>
