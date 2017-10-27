@@ -9,18 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeNoActionBar">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Login_Scene.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AdicionarContato">
+        <activity android:name=".AdicionarContato_Scene.AdicionarContatoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.INSERT" />
             </intent-filter>
         </activity>
-        <activity android:name=".ContatoActivity">
+        <activity android:name=".Contatos_Scene.ContatosActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
