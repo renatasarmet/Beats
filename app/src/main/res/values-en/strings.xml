@@ -9,4 +9,7 @@
     <string name="email">E-mail</string>
     <string name="add_picture">Add picture</string>
     <string name="save">Save</string>
+    <string name="invalidUsername">Invalid Username</string>
+    <string name="invalidPassword">Invalid Password</string>
+    <string name="map">Map</string>
 </resources>
