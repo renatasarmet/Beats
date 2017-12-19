@@ -1,5 +1,7 @@
 package com.example.android.beats.Login_Scene;
 
+import android.util.Log;
+
 public class LoginPresenter {
 
     LoginView loginView = null;
@@ -14,6 +16,10 @@ public class LoginPresenter {
             loginView.setErrorUsername();
         }
         else if(password.toString().isEmpty()){
+            loginView.setErrorPassword();
+        }
+        else if(!username.toString().equals(password.toString())){
+            loginView.setErrorUsername();
             loginView.setErrorPassword();
         }
         else{

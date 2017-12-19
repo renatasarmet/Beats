@@ -1,6 +1,10 @@
 package com.example.android.beats.Contatos_Scene;
 
 
+import com.example.android.beats.Entity.Contato;
+
+import java.util.List;
+
 public class ContatosPresenter {
 
     ContatosView contatosView = null;
@@ -11,5 +15,10 @@ public class ContatosPresenter {
 
     public void adicionar(){
         contatosView.addContato();
+    }
+    protected void updateList(List<Contato> listContact) {
+        contatosView.updateList(listContact);
+
+
     }
 }

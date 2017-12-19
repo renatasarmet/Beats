@@ -2,40 +2,31 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/Users/renatasarmet/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.8.1/bc373fb6bc7bca3035041b924f158fd2b946ee8d/butterknife-annotations-8.8.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="bc373fb6bc7bca3035041b924f158fd2b946ee8d">
-        <dex dex="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-annotations-8.8.1_f246f87345d7fefda88676a2a546991924647b28/classes.dex" />
-    </item>
-    <item
         is-multidex="false"
-        jar="/Users/renatasarmet/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.8.1/bc373fb6bc7bca3035041b924f158fd2b946ee8d/butterknife-annotations-8.8.1.jar"
+        jar="/Users/renatasarmet/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="bc373fb6bc7bca3035041b924f158fd2b946ee8d">
-        <dex dex="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/pre-dexed/debug/butterknife-annotations-8.8.1_f246f87345d7fefda88676a2a546991924647b28.jar" />
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/pre-dexed/debug/glide-3.7.0_50393862f415c2d5f50bfbd4066f031a7cee5bb9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/renatasarmet/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_bfd62d25f857c4c587802bd078e4812711c358be.jar" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/renatasarmet/.android/build-cache/70d32ac51c0abd25093f6f1271138771954b865d/output/jars/classes.jar"
+        jar="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
-        <dex dex="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_316a51385dcefaf177e743348f0acd7dba1c70e6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/renatasarmet/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
-        <dex dex="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_b786ca76ce2988bfeafc754c3802e6fe9ee79097/classes.dex" />
+        sha1="872e868c34e3268078d4490481094e7b1ec6918a">
+        <dex dex="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ee449f3e36b0f0e0e4e8d6f2ce767c093a5d09d7/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -48,42 +39,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/renatasarmet/.android/build-cache/a63080ba2ecfd799ead021466a24f14204fd892d/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="6a2bcb61342d09fe9acf55c9daf63961c8866cc0">
-        <dex dex="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_502754c7befb6a50120383be6e6b92b99dc47e8a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c0c217ff4e52eabf26706e8d9b88c8a3b6c528db">
-        <dex dex="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ee449f3e36b0f0e0e4e8d6f2ce767c093a5d09d7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/renatasarmet/.android/build-cache/0e5bad42e784612cc2066fa28c75f368a417fc0b/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="95519720620b553f63afc789beba9ad582807f7c">
-        <dex dex="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d136a06f6f13adaa5afc59c53a44206c9463a365/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/renatasarmet/.android/build-cache/1d4d7b6ff554fbc055ba793fbff8ce37eda95dc5/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
-        <dex dex="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a52aeebfb91ad9d09d36c559f623c1e4fce0bddf/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -92,13 +47,13 @@
         <dex dex="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_d6913755fb6bec5c96cbfccf563e075d3795199b/classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/renatasarmet/.android/build-cache/617b9cd4cbefee197fadfc431387f73e450b8e15/output/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/renatasarmet/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.8.1/bc373fb6bc7bca3035041b924f158fd2b946ee8d/butterknife-annotations-8.8.1.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
-        <dex dex="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f72f3b803186ac727d8d9a8f1c7ff3b8254db296/classes.dex" />
+        sha1="bc373fb6bc7bca3035041b924f158fd2b946ee8d">
+        <dex dex="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/pre-dexed/debug/butterknife-annotations-8.8.1_f246f87345d7fefda88676a2a546991924647b28.jar" />
     </item>
 
 </items>
