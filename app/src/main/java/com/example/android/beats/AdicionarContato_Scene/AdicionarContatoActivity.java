@@ -10,6 +10,8 @@ import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -63,6 +65,13 @@ public class AdicionarContatoActivity extends AppCompatActivity implements Adici
     }
 
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_salvar, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
     public void adicionarFoto(){
         Intent intentCamera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         caminhoFoto = getExternalFilesDir(null) + "/" + System.currentTimeMillis() + ".jpg";
@@ -70,7 +79,6 @@ public class AdicionarContatoActivity extends AppCompatActivity implements Adici
         Uri fileUri = FileProvider.getUriForFile(this, "com.example.Beats.fileprovider", arquivoFoto);
         intentCamera.putExtra(MediaStore.EXTRA_OUTPUT,fileUri);
         startActivityForResult(intentCamera, CODIGO_CAMERA);
-
 
     }
 
@@ -101,10 +109,6 @@ public class AdicionarContatoActivity extends AppCompatActivity implements Adici
         }
     }
 
-    @OnClick(R.id.buttonSalvar)
-    public void salvarContato(){
-        adicionarContatoPresenter.salvarContato();
-    }
 
     public void salvar() {
         //Futuramente aqui deverá salvar no banco de dados
@@ -116,4 +120,20 @@ public class AdicionarContatoActivity extends AppCompatActivity implements Adici
         irParaContatos.putExtra("contato",c);
         startActivity(irParaContatos);
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_salvar:
+                adicionarContatoPresenter.salvarContato();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+    }
+
+
+
 }

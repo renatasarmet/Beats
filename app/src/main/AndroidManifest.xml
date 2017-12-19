@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".AdicionarContato_Scene.AdicionarContatoActivity">
+        <activity android:name=".AdicionarContato_Scene.AdicionarContatoActivity"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.INSERT" />
             </intent-filter>

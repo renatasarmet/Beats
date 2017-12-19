@@ -3,15 +3,6 @@
 
     <item
         is-multidex="false"
-        jar="/Users/renatasarmet/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
-        <dex dex="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/pre-dexed/debug/glide-3.7.0_50393862f415c2d5f50bfbd4066f031a7cee5bb9.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/renatasarmet/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
         jumboMode="false"
         optimize="true"
@@ -25,8 +16,26 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="872e868c34e3268078d4490481094e7b1ec6918a">
+        sha1="0725eacc4c32c89a0cf4b5d0da915ab7a9216ca6">
         <dex dex="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ee449f3e36b0f0e0e4e8d6f2ce767c093a5d09d7/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/renatasarmet/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.8.1/bc373fb6bc7bca3035041b924f158fd2b946ee8d/butterknife-annotations-8.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bc373fb6bc7bca3035041b924f158fd2b946ee8d">
+        <dex dex="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/pre-dexed/debug/butterknife-annotations-8.8.1_f246f87345d7fefda88676a2a546991924647b28.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/renatasarmet/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/pre-dexed/debug/glide-3.7.0_50393862f415c2d5f50bfbd4066f031a7cee5bb9.jar" />
     </item>
     <item
         is-multidex="false"
@@ -45,15 +54,6 @@
         revision="25.0.0"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
         <dex dex="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_d6913755fb6bec5c96cbfccf563e075d3795199b/classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/renatasarmet/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.8.1/bc373fb6bc7bca3035041b924f158fd2b946ee8d/butterknife-annotations-8.8.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="bc373fb6bc7bca3035041b924f158fd2b946ee8d">
-        <dex dex="/Users/renatasarmet/Documents/GitKraken Clones/Beats/app/build/intermediates/pre-dexed/debug/butterknife-annotations-8.8.1_f246f87345d7fefda88676a2a546991924647b28.jar" />
     </item>
 
 </items>

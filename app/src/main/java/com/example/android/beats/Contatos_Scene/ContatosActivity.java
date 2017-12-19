@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.android.beats.AdicionarContato_Scene.AdicionarContatoActivity;
+import com.example.android.beats.ContatoDetail_Scene.ContatoDetailActivity;
 import com.example.android.beats.Entity.Contato;
 import com.example.android.beats.R;
 
@@ -51,6 +52,8 @@ public class ContatosActivity extends AppCompatActivity implements ContatosView{
         }
         contatosPresenter.updateList(listContatos);
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -94,6 +97,9 @@ public class ContatosActivity extends AppCompatActivity implements ContatosView{
         actionsAdapter.setOnRecyclerViewSelected(new OnRecyclerViewSelected() {
             @Override
             public void onClick(View view, int position) {
+                Intent openDetailActivity = new Intent(ContatosActivity.this, ContatoDetailActivity.class);
+                openDetailActivity.putExtra("contato", contatosList.get(position));
+                startActivity(openDetailActivity);
 
             }
         });

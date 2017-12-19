@@ -4,7 +4,7 @@
 
     <item android:id="@+id/action_cadastrar"
         android:title="Cadastrar Contato"
-        android:icon="@drawable/logo"
+        android:icon="@drawable/mais"
         app:showAsAction="ifRoom" />
 
 </menu>
