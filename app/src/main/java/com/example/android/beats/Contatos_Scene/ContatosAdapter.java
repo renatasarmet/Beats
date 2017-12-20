@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,10 +24,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
-/**
- * Created by renatasarmet on 18/12/2017.
- */
 
 public class ContatosAdapter extends RecyclerView.Adapter<ContatosAdapter.ViewHolder> {
     private List<Contato> contatoList;
@@ -50,6 +47,7 @@ public class ContatosAdapter extends RecyclerView.Adapter<ContatosAdapter.ViewHo
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Contato contato = contatoList.get(position);
+        Log.d("CAMINHO", "olha : " + contato.getImage());
         holder.txnome.setText(contato.getNome());
         holder.txtelefone.setText(contato.getTelefone());
         final Context context = holder.imgBackgroud.getContext();

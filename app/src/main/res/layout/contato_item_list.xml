@@ -36,7 +36,8 @@
             android:maxLines="1"
             android:textAllCaps="true"
             android:textColor="@color/white"
-            android:textSize="27sp" />
+            android:textSize="22sp"
+            android:layout_centerVertical="true" />
         <TextView
             android:id="@+id/tx_telefone"
             android:layout_width="wrap_content"
@@ -44,12 +45,14 @@
             android:layout_centerInParent="true"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
             android:ellipsize="end"
             android:fontFamily="sans-serif-light"
             android:maxLines="1"
             android:textAllCaps="true"
             android:textColor="@color/white"
-            android:textSize="27sp" />
+            android:textSize="22sp"
+            android:layout_centerVertical="true"/>
     </LinearLayout>
 
 

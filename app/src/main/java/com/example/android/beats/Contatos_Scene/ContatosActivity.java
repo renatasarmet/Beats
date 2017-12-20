@@ -1,14 +1,10 @@
 package com.example.android.beats.Contatos_Scene;
 
 import android.content.Intent;
-import android.os.Parcelable;
-import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,12 +16,10 @@ import com.example.android.beats.Entity.ContatoList;
 import com.example.android.beats.R;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 
 public class ContatosActivity extends AppCompatActivity implements ContatosView{

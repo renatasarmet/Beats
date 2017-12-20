@@ -1,7 +1,5 @@
 package com.example.android.beats.Login_Scene;
 
-import android.util.Log;
-
 public class LoginPresenter {
 
     LoginView loginView = null;

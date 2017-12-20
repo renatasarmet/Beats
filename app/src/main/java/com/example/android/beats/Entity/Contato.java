@@ -1,9 +1,5 @@
 package com.example.android.beats.Entity;
 
-
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import java.io.Serializable;
 
 public class Contato implements Serializable {

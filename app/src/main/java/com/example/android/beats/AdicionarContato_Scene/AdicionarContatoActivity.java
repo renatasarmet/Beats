@@ -1,22 +1,15 @@
 package com.example.android.beats.AdicionarContato_Scene;
 
 import android.app.Activity;
-import android.app.ListFragment;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.provider.MediaStore;
-import android.support.design.widget.TextInputEditText;
-import android.support.design.widget.TextInputLayout;
 import android.support.v4.content.FileProvider;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -25,22 +18,14 @@ import android.widget.Toast;
 
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
-import com.example.android.beats.CircleTransform;
 import com.example.android.beats.Contatos_Scene.ContatosActivity;
 import com.example.android.beats.Entity.Contato;
 import com.example.android.beats.Entity.ContatoList;
-import com.example.android.beats.Login_Scene.LoginActivity;
 import com.example.android.beats.R;
-import com.squareup.picasso.Picasso;
 
 import java.io.File;
 import java.io.Serializable;
-import java.net.URI;
-import java.util.ArrayList;
-import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -168,7 +153,5 @@ public class AdicionarContatoActivity extends AppCompatActivity implements Adici
         }
 
     }
-
-
 
 }
