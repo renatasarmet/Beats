@@ -43,13 +43,8 @@ public class ContatosActivity extends AppCompatActivity implements ContatosView{
         ButterKnife.bind(this);
         contatosPresenter = new ContatosPresenter(this);
 
-        //insere opção Up Action na ActionBar
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
         if( this.getIntent().getExtras() != null){
             listContatos = (ContatoList) this.getIntent().getSerializableExtra("Contatos");
-            Log.e("Tamanho",""+listContatos.getContatos().get(0).getNome());
         }
         if(listContatos!= null)
             contatosPresenter.updateList(listContatos.getContatos());
@@ -70,11 +65,6 @@ public class ContatosActivity extends AppCompatActivity implements ContatosView{
 
     }
 
-//    @OnClick(R.id.buttonAdd)
-//    public void adicionar(){
-//        contatosPresenter.adicionar();
-//    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_cadastrar, menu);
@@ -91,8 +81,6 @@ public class ContatosActivity extends AppCompatActivity implements ContatosView{
 
     @Override
     public void updateList(final List<Contato> contatosList) {
-            if(contatosList.size() > 0)
-                Log.e("TAMANHOCA",""+contatosList.get(0).getNome());
             ContatosAdapter actionsAdapter = new ContatosAdapter(contatosList, this);
             actionsAdapter.setOnRecyclerViewSelected(new OnRecyclerViewSelected() {
                 @Override
@@ -100,7 +88,6 @@ public class ContatosActivity extends AppCompatActivity implements ContatosView{
                     Intent openDetailActivity = new Intent(ContatosActivity.this, ContatoDetailActivity.class);
                     openDetailActivity.putExtra("contato", (Serializable) contatosList.get(position));
                     startActivity(openDetailActivity);
-
                 }
             });
 

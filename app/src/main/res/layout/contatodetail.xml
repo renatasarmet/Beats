@@ -15,62 +15,111 @@
 
         <ImageView
             android:id="@+id/img"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/tx_label_nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-bold"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:text="Nome"/>
 
         <TextView
             android:id="@+id/tx_nome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginRight="5dp"
-            android:ellipsize="end"
-            android:fontFamily="sans-serif-light"
-            android:maxLines="1"
-            android:textAllCaps="true"
+            android:layout_gravity="left"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-bold"
             android:textColor="@color/white"
-            android:textSize="27sp" />
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tx_label_telefone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-bold"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:text="Telefone"/>
+
         <TextView
             android:id="@+id/tx_telefone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="left"
             android:layout_marginRight="5dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:ellipsize="end"
-            android:fontFamily="sans-serif-light"
-            android:maxLines="1"
-            android:textAllCaps="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-bold"
             android:textColor="@color/white"
-            android:textSize="27sp" />
+            android:textSize="22sp"/>
+
+        <TextView
+            android:id="@+id/tx_label_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-bold"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:text="Email"/>
+
         <TextView
             android:id="@+id/tx_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginRight="5dp"
-            android:ellipsize="end"
-            android:fontFamily="sans-serif-light"
-            android:maxLines="1"
-            android:textAllCaps="true"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="left"
+            android:fontFamily="sans-serif-bold"
             android:textColor="@color/white"
-            android:textSize="27sp" />
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tx_label_endereco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-bold"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:text="Endereço"/>
+
         <TextView
             android:id="@+id/tx_endereco"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginRight="5dp"
-            android:ellipsize="end"
-            android:fontFamily="sans-serif-light"
-            android:maxLines="1"
-            android:textAllCaps="true"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="left"
+            android:fontFamily="sans-serif-bold"
             android:textColor="@color/white"
-            android:textSize="27sp" />
+            android:textSize="22sp" />
     </LinearLayout>
 </ScrollView>

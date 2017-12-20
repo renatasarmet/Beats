@@ -3,6 +3,7 @@ package com.example.android.beats.AdicionarContato_Scene;
 import android.app.Activity;
 import android.app.ListFragment;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,6 +13,8 @@ import android.provider.MediaStore;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.content.FileProvider;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -23,6 +26,8 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
+import com.bumptech.glide.request.target.BitmapImageViewTarget;
+import com.example.android.beats.CircleTransform;
 import com.example.android.beats.Contatos_Scene.ContatosActivity;
 import com.example.android.beats.Entity.Contato;
 import com.example.android.beats.Entity.ContatoList;
@@ -65,8 +70,12 @@ public class AdicionarContatoActivity extends AppCompatActivity implements Adici
         super.onCreate(savedInstanceState);
         setContentView(R.layout.addcontact);
         ButterKnife.bind(this);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
         listcont = (ContatoList) this.getIntent().getSerializableExtra("Contatos");
         adicionarContatoPresenter = new AdicionarContatoPresenter(this);
+        setTitle("Adicionar Contato");
     }
 
     @OnClick(R.id.buttonAddFoto)
@@ -99,7 +108,7 @@ public class AdicionarContatoActivity extends AppCompatActivity implements Adici
 
     public void abrirMapa(){
         Intent intentMapa = new Intent(Intent.ACTION_VIEW);
-        intentMapa.setData(Uri.parse("geo:0,0?q=" + txEndereco));
+        intentMapa.setData(Uri.parse("geo:0,0?q=" + txEndereco.getText()));
         if(intentMapa.resolveActivity(getPackageManager()) != null) {
             startActivity(intentMapa);
         }else {
@@ -112,9 +121,15 @@ public class AdicionarContatoActivity extends AppCompatActivity implements Adici
         if (requestCode == CODIGO_CAMERA && resultCode == Activity.RESULT_OK) {
             Glide.with(imgBtn.getContext())
                     .load(caminhoFoto)
-                    .transform(new CenterCrop(imgBtn.getContext()))
-                    .override(40,40)
-                    .into(imgBtn);
+                    .asBitmap().centerCrop()
+                    .into(new BitmapImageViewTarget(imgBtn){
+                        @Override
+                        protected  void  setResource(Bitmap resource){
+                            RoundedBitmapDrawable circularBitmapDrawable = RoundedBitmapDrawableFactory.create(imgBtn.getContext().getResources(),resource);
+                            circularBitmapDrawable.setCircular(true);
+                            imgBtn.setImageDrawable(circularBitmapDrawable);
+                        }
+                    }); //imgBtn);
             cImg= caminhoFoto;
         }
     }
@@ -134,6 +149,7 @@ public class AdicionarContatoActivity extends AppCompatActivity implements Adici
         listcont.addContatos(c);
         irParaContatos.putExtra("Contatos",(Serializable)  listcont);
         startActivity(irParaContatos);
+        finish();
     }
 
     @Override
@@ -142,6 +158,10 @@ public class AdicionarContatoActivity extends AppCompatActivity implements Adici
             case R.id.action_salvar:
                 adicionarContatoPresenter.salvarContato();
                 return true;
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+
 
             default:
                 return super.onOptionsItemSelected(item);
