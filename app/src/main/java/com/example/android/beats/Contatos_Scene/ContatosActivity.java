@@ -1,6 +1,7 @@
 package com.example.android.beats.Contatos_Scene;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.view.View;
 import com.example.android.beats.AdicionarContato_Scene.AdicionarContatoActivity;
 import com.example.android.beats.ContatoDetail_Scene.ContatoDetailActivity;
 import com.example.android.beats.Entity.Contato;
+import com.example.android.beats.Entity.ContatoList;
 import com.example.android.beats.R;
 
 import java.io.Serializable;
@@ -32,7 +34,7 @@ public class ContatosActivity extends AppCompatActivity implements ContatosView{
     @BindView(R.id.rv_contatos)
     RecyclerView rvContato;
 
-    List<Contato> listContatos = new ArrayList<Contato>();
+    ContatoList listContatos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +47,12 @@ public class ContatosActivity extends AppCompatActivity implements ContatosView{
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-        Contato aux = (Contato) getIntent().getSerializableExtra("contato");
-        if( aux != null){
-            listContatos.add((Contato) getIntent().getSerializableExtra("contato"));
-            Log.d("TESTE", "Nudes: " + aux.getNome());
+        if( this.getIntent().getExtras() != null){
+            listContatos = (ContatoList) this.getIntent().getSerializableExtra("Contatos");
+            Log.e("Tamanho",""+listContatos.getContatos().get(0).getNome());
         }
-        contatosPresenter.updateList(listContatos);
+        if(listContatos!= null)
+            contatosPresenter.updateList(listContatos.getContatos());
     }
 
 
@@ -81,34 +83,32 @@ public class ContatosActivity extends AppCompatActivity implements ContatosView{
 
     public void addContato(){
         Intent adicionarContato = new Intent(ContatosActivity.this,AdicionarContatoActivity.class);
+        adicionarContato.putExtra("Contatos",(Serializable) listContatos);
         startActivity(adicionarContato);
-
     }
 
 
 
     @Override
     public void updateList(final List<Contato> contatosList) {
-        // Seta o Adapter
-        if(contatosList.size() !=0 ) {
-            Log.d("aaa:", contatosList.get(0).getNome());
+            if(contatosList.size() > 0)
+                Log.e("TAMANHOCA",""+contatosList.get(0).getNome());
+            ContatosAdapter actionsAdapter = new ContatosAdapter(contatosList, this);
+            actionsAdapter.setOnRecyclerViewSelected(new OnRecyclerViewSelected() {
+                @Override
+                public void onClick(View view, int position) {
+                    Intent openDetailActivity = new Intent(ContatosActivity.this, ContatoDetailActivity.class);
+                    openDetailActivity.putExtra("contato", (Serializable) contatosList.get(position));
+                    startActivity(openDetailActivity);
+
+                }
+            });
+
+            rvContato.setAdapter(actionsAdapter);
+            LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+            rvContato.setLayoutManager(layoutManager);
+
+
         }
-        ContatosAdapter actionsAdapter = new ContatosAdapter(contatosList, this);
-        actionsAdapter.setOnRecyclerViewSelected(new OnRecyclerViewSelected() {
-            @Override
-            public void onClick(View view, int position) {
-                Intent openDetailActivity = new Intent(ContatosActivity.this, ContatoDetailActivity.class);
-                openDetailActivity.putExtra("contato", contatosList.get(position));
-                startActivity(openDetailActivity);
 
-            }
-        });
-
-        rvContato.setAdapter(actionsAdapter);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        rvContato.setLayoutManager(layoutManager);
-
-
-
-    }
 }

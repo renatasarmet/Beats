@@ -53,6 +53,7 @@ public class ContatoDetailActivity extends AppCompatActivity implements ContatoD
     }
 
 
+
     @Override
     public void showDetails(Contato contato) {
         Picasso.with(this)

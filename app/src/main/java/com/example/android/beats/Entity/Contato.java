@@ -1,15 +1,19 @@
 package com.example.android.beats.Entity;
 
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.io.Serializable;
 
-public class Contato implements Serializable{
+public class Contato implements Serializable {
 
     private String nome;
     private String email;
     private String telefone;
     private String endereco;
     private String image;
+    private int mData;
 
     private static final long serialVersionUID = 46543445;
 

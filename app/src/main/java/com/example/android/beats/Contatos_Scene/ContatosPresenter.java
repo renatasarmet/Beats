@@ -1,6 +1,8 @@
 package com.example.android.beats.Contatos_Scene;
 
 
+import android.util.Log;
+
 import com.example.android.beats.Entity.Contato;
 
 import java.util.List;

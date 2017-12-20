@@ -26,6 +26,13 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ContatoDetail_Scene.ContatoDetailActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.INSERT" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".Contatos_Scene.ContatosActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -37,6 +44,7 @@
             android:authorities="com.example.Beats.fileprovider"
             android:grantUriPermissions="true"
             android:exported="false">
+
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths" />
